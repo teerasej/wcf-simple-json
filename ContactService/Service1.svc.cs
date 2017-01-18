@@ -27,23 +27,60 @@ namespace ContactService
             return result;
         }
 
-        public string GetData(int value)
+        public List<AccountContract> getAccounts()
         {
-            return string.Format("You entered: {0}", value);
+            List<AccountContract> results = new List<AccountContract>();
+
+            results.Add(new AccountContract
+            {
+                Name = "พล"
+                ,
+                Email = "teerasej@nextflow.in.th"
+                ,
+                Tel = "083-071-3373"
+            });
+
+            results.Add(new AccountContract
+            {
+                Name = "John"
+                ,
+                Email = "johndoe@apple.com"
+                ,
+                Tel = "018-190-3881"
+            });
+
+            results.Add(new AccountContract
+            {
+                Name = "Tony Stark"
+                ,
+                Email = "tony@stark.com"
+                ,
+                Tel = "083-391-3918"
+            });
+
+            results.Add(new AccountContract
+            {
+                Name = "Jack Sparrow"
+                ,
+                Email = "jack@sparrow.net"
+                ,
+                Tel = "082-198-2837"
+            });
+
+            results.Add(new AccountContract
+            {
+                Name = "Mitsuha"
+                ,
+                Email = "mitsuha@yourname.com"
+                ,
+                Tel = "087-291-3871"
+            });
+
+            return results;
+
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
-        }
+
 
 
     }
