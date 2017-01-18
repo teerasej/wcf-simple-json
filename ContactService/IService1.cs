@@ -28,7 +28,7 @@ namespace ContactService
             , RequestFormat = WebMessageFormat.Json
             , ResponseFormat = WebMessageFormat.Json
             , Method = "POST")]
-        bool addAccount(AccountContract account);
+        StatusContract addAccount(AccountContract account);
 
         // TODO: Add your service operations here
     }
