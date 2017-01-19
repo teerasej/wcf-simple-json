@@ -16,7 +16,7 @@ namespace ContactService
         {
             StatusContract result = new StatusContract();
 
-            result.Message = "OK";
+            result.Message = "Thank you, " + account.Name;
 
             return result;
         }
