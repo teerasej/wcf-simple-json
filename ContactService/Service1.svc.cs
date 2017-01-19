@@ -21,6 +21,12 @@ namespace ContactService
             return result;
         }
 
+        public StatusContract getSimpleJSON()
+        {
+            StatusContract result = new StatusContract { Message = "Hello from WCF!" };
+            return result;
+        }
+
         public AccountContract getAccount()
         {
             AccountContract result;

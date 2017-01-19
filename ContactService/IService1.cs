@@ -12,9 +12,14 @@ namespace ContactService
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        [WebGet(UriTemplate = "/sample"
+           , ResponseFormat = WebMessageFormat.Json)]
+        StatusContract getSimpleJSON();
+
 
         [OperationContract]
-        [WebGet(UriTemplate="/account/sample"
+        [WebGet(UriTemplate="/account/1"
             , ResponseFormat =WebMessageFormat.Json)]
         AccountContract getAccount();
 
